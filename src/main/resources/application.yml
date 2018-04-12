@@ -1,0 +1,13 @@
+info:
+    project:
+        name: websockets-example
+
+spring:
+    application:
+        name: websockets-example
+    main:
+        banner-mode: "off"
+
+management:
+    security:
+        enabled: false
