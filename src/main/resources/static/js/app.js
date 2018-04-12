@@ -37,7 +37,8 @@ function sendName() {
 }
 
 function showMessage(message) {
-  $("#messages").append("<tr><td>" + message.subject + "</td><td>" + message.content + "</td><td>" + message.sent + "</td><td>" + message.received + "</td></tr>");
+  var date_format = 'DD/MM/YYYY hh:mm:ss';
+  $("#messages").append("<tr><td>" + message.subject + "</td><td>" + message.content + "</td><td>" + moment(message.received).format(date_format) + "</td><td>" + moment(message.send).format(date_format) + "</td></tr>");
 }
 
 $(function () {

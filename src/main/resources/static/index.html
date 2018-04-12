@@ -8,6 +8,7 @@
   <script src="/webjars/sockjs-client/sockjs.min.js"></script>
   <script src="/webjars/stomp-websocket/stomp.min.js"></script>
   <script src="/js/app.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.0/moment.min.js"></script>
 </head>
 <body>
 <noscript>
@@ -46,13 +47,13 @@
       <table id="conversation" class="table table-striped">
         <thead>
         <tr>
-          <th colspan="2">Chat Maroto</th>
+          <th colspan="4">Chat Maroto</th>
         </tr>
         <tr>
           <th>Assunto</th>
           <th>Conteudo</th>
-          <th>Mensagem Enviada</th>
           <th>Mensagem Recebida</th>
+          <th>Mensagem Processada</th>
         </tr>
         </thead>
         <tbody id="messages">
