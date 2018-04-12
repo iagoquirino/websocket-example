@@ -9,7 +9,7 @@ import org.springframework.web.socket.config.annotation.WebSocketTransportRegist
 
 @Configuration
 @EnableWebSocketMessageBroker
-open class WebSocketConfiguration : WebSocketMessageBrokerConfigurer {
+class WebSocketConfiguration : WebSocketMessageBrokerConfigurer {
 
     override fun registerStompEndpoints(registry:StompEndpointRegistry ) {
         registry.addEndpoint("/messages").withSockJS()
