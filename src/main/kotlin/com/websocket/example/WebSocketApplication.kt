@@ -6,9 +6,9 @@ import org.springframework.web.socket.config.annotation.EnableWebSocket;
 
 @SpringBootApplication
 @EnableWebSocket
-public class WebSocketApplication {
+open class WebSocketApplication
 
-  public static void main(String[] args) {
-    SpringApplication.run(WebSocketApplication.class, args);
-  }
+fun main(args: Array<String>) {
+  SpringApplication.run(WebSocketApplication::class.java, *args)
 }
+

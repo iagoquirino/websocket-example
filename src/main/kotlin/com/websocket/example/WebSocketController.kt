@@ -7,17 +7,15 @@ import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.stereotype.Controller;
 
 @Controller
-public class WebSocketController {
+class WebSocketController {
 
   @MessageMapping("/send")
   @SendTo("/topic/messages/response")
-  public Message send(Message message) throws Exception{
-    message.setReceived(Date.from(Instant.now()));
-
-    Thread.sleep(1000L); // simulate service calls.
-
-    message.setSent(Date.from(Instant.now()));
-    return message;
+  fun send(message : Message):Message {
+    message.received = Date.from(Instant.now())
+    Thread.sleep(1000L) // simulate service calls.
+    message.sent = Date.from(Instant.now())
+    return message
   }
 
 
